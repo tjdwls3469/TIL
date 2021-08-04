@@ -18,3 +18,7 @@
 >server as a result of applying a safe method to a target resource.
 >
 >Of the request methods defined by this specification, the GET, HEAD, OPTIONS, and TRACE methods are defined to be safe
+
+>Request methods are considered "safe" if their defined semantics are essentially read-only; i.e., the client does not request, and does not expect, any state change on the origin server as a result of applying a safe method to a target resource.
+>
+>Of the request methods defined by this specification, the GET, HEAD, OPTIONS, and TRACE methods are defined to be safe.
