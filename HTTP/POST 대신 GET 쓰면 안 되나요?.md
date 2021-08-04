@@ -13,6 +13,7 @@
 * 공식문서를 보면 읽기 전용인 요청 메소드는 "안전한" 것으로 간주한다.  
   즉, 클라이언트는 대상 리소스에 안전한 방법을 적용한 결과로 서버의 상태 변경을 요청하지 않으며 예상하지도 않는다.  
   공식문서에서 정의한 요청 메소드 중 GET, HEAD, OPTIONS, TRACE 메소드는 안전한 것으로 정의되어 있다.
+* <https://httpwg.org/specs/rfc7231.html>
 ```
 Request methods are considered "safe" if their defined semantics are essentially read-only; i.e., the client does not request, and does not expect, any state change on the origin server as a result of applying a safe method to a target resource.
 
