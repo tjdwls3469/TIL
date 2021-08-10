@@ -1,0 +1,4 @@
+### Git은 일반적으로 세 가지 트리를 관리하는 시스템이다.
+* HEAD: 마지막 커밋 스냅샷
+* Index: 다음에 커밋할 스냅샷, Staging Area
+* Working Directory: 샌드박스
