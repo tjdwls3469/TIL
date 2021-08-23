@@ -1,0 +1,12 @@
+### CORS
+
+* Cross-Origin Resource Sharing의 줄임말이다.
+* 한 Origin에서 실행 중인 웹 어플리케이션이 다른 Origin의 자원에 접근할 수 있는 권한을 부여하도록 브라우저에 알려주는 체제다.
+
+<br>
+
+### CORS가 필요한 이유
+
+* 보안 상의 이유로, 브라우저는 스크립트에서 시작한 교차 출처 HTTP 요청을 제한한다.
+* 다른 Origin의 자원에 접근하려면 신뢰할 때에만 허용한다.
+![image](https://user-images.githubusercontent.com/53414240/130447851-a60e6296-0c01-4ef3-bcc5-2b4fa6d7657a.png)
