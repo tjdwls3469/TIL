@@ -19,3 +19,4 @@
 * Gradle Daemon
     * 백그라운드 프로세스다.
     * 프로젝트에 대한 데이터를 메모리에 유지함으로써 값비싼 프로세스를 피하고 캐싱을 활용하여 훨씬 더 빠르게 빌드를 실행한다.
+* <https://gradle.org/gradle-vs-maven-performance/>
