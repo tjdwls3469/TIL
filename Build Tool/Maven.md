@@ -2,6 +2,7 @@
 
 * Project Object Model
 * Maven에서 프로젝트를 빌드 하는 데 사용하는 프로젝트 및 세부 정보에 대한 정보가 포함된 XML 파일이다.
+* <https://maven.apache.org/guides/introduction/introduction-to-the-pom.html>
 
 <br>
 
@@ -15,6 +16,7 @@
 
 * SNAPSHOT은 안정 또는 불변 보장을 제공하지 않는 '개발'버전을 의미한다.
 * release 버전의 코드는 변경되지 않는다.
+* <https://maven.apache.org/guides/getting-started/index.html>
 
 <br>
 
@@ -37,6 +39,7 @@
 5. 통합 테스트한다.
 6. 결과물을 local repository에 설치한다.
 7. 설치된 패키지를 remote repository에 배포한다.
+* https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
 
 <br>
 
