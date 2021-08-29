@@ -19,3 +19,4 @@
 * 메모리 캐시
 * 성능 지원
 * 기타 대상 기능
+* <https://dev.mysql.com/doc/refman/8.0/en/pluggable-storage-common-layer.html>
