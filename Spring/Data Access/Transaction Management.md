@@ -5,6 +5,7 @@
 * 선언적 트랜잭션 관리 지원
 * JTA와 같은 복잡한 트랜잭션 API보다 프로그래밍 방식의 트랜잭션 관리를 위한 더 간단한 API 제공
 * 뛰어난 접근 추상화
+* <https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#spring-data-tier>
 
 <br>
 
