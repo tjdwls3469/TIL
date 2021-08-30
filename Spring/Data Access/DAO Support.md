@@ -7,3 +7,9 @@
 
 ### DataAccessException 계층 구조
 <img src = "https://user-images.githubusercontent.com/53414240/131298735-5d9777de-f88d-4ddc-bd23-f65041e5f7ee.png" width="65%" height="65%">
+
+<br>
+
+### DAO 또는 Repository class를 구성하는 데 사용되는 annotation
+
+* 가장 좋은 방법은 @Repository을 사용하는 것이다
