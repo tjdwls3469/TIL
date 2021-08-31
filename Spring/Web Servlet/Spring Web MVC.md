@@ -245,3 +245,21 @@
 * Spring 5.3에서는 임의의 원인 수준을 일치시킬 수 있지만 이전 버전에서는 포괄적인 원인만 고려되었다.
 * 각각의 상황에 맞는 예외를 최대한 구체적으로 작성하는 게 좋다.
 * 우선순위가 지정된 순서로 예외 매핑을 선언하는 것이 좋다.
+
+<br>
+
+### CORS
+
+* Spring MVC를 사용하면 CORS(Cross-Origin Resources Sharing)를 처리할 수 있다.
+* 클래스나 메소드에 @CrossOrigin를 사용하여 처리할 수 있다.
+
+<br>
+
+### @CrossOrigin
+
+* @CrossOrigin 디폴트로 아래와 같이 세 가지를 허용한다.
+1. All origins
+2. All headers
+3. 컨트롤러 메소드가 매핑되는 모든 HTTP 메소드
+* allowOrigins, allowOriginPatterns을 통해서 특정 도메인을 설정할 수 있다.
+* maxAge로 시간도 설정할 수 있다.
