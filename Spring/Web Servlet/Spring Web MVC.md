@@ -87,3 +87,19 @@
 |DefaultHandlerExceptionResolver|Spring MVC에서 발생한 예외를 해결하고 이를 HTTP 상태 코드에 매핑한다. ResponseEntityExceptionHandler 참조|
 |ResponseStatusExceptionResolver|ResponseStatus 어노테이션으로 예외를 해결하고 HTTP 상태 코드에 매핑한다.|
 |ExceptionHandlerExceptionResolver|@Controller 클래스 안에 있는 @ExceptionHandler 메소드를 호출하거나 @ControllerAdvice 클래스를 통해서 예외를 해결한다.|
+
+<br>
+
+### Redirecting
+
+* redirect: 접두사를 사용하면 Redirecting을 수행할 수 있다.
+* UrlBasedViewResolver가 redirect:를 인식한다.
+* Redirecting을 하면 URL이 변경된다. 
+* @ResponseStatus는 Redirecting보다 우선순위가 높다.
+
+<br>
+
+### Forwarding
+
+* forward: 접두사를 사용하면 Forwarding을 수행할 수 있다.
+* 리소스를 전달할 수 있다.
