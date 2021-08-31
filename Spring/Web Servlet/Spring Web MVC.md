@@ -36,3 +36,16 @@
 |ThemeResolver|개인환된 레이아웃을 제공하기 위해 웹 애플리케이션에서 사용할 수 있는 테마를 해결해준다.|
 |MultipartResolver|예를 들면 파일 업로드의 구문을 분석하기 위한 추상화를 도와준다.|
 |FlashMapManager|redirect를 통해 속성을 전달하는 데 사용할 수 있는 "input" 및 "output"을 저장하고 검색한다.|
+
+<br>
+
+### Spring Web MVC 동작원리
+
+1. WebApplicationContext는 검색 과정에서 컨트롤러와 다른 요소가 사용할 수 있는 속성으로 요청에 결합된다. 기본적으로 DispatcherServlet.WEB_APPLICATION_CONTEXT_ATTRIBUTE 키에 바인딩 된다.
+2. LocaleResolver는 locale을 확인하도록 요청에 바인딩 된다. locale 해석이 필요하지 않으면 LocaleResolver는 무시해도 된다.
+3. ThemeResolver는 View와 같은 요소가 사용할 테마를 결정하도록 하는 요청에 바인딩 된다. 테마를 사용하지 않는다면 무시해도 된다.
+4. MultipartResolver를 지정하면 요청에서 Multipart가 검사된다. Multipart가 발견되면 추가 처리를 위해 MultipartHttpServletRequest로 래핑된다.
+5. 적절한 Controller를 검색해서 실행시킨다.
+6. 모델이 반환되면 뷰가 렌더링 된다. 만약 모델이 반환되지 않으면 요청이 이미 수행되었을 수 있으므로 렌더링되지 않는다.
+
+* HTTP 캐싱 지원을 위해 WebRequest의 checkNotModified 메소드를 사용할 수 있다.
