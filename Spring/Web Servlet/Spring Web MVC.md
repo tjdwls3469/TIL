@@ -103,3 +103,14 @@
 
 * forward: 접두사를 사용하면 Forwarding을 수행할 수 있다.
 * 리소스를 전달할 수 있다.
+
+<br>
+
+### MultipartResolver
+
+* org.springframework.web.multipart 패키지에서 파일 업로드를 포함한 multipart 요청을 분석하기 위한 전략이다.
+* Commons FileUpload을 기반으로 하는 구현과 Servlet 3.0 multipart request parsing을 기반으로 하는 구현이 있다.
+* Commons FileUpload는 전통적으로 POST 요청에만 적용되지만 모든 multipart/ 콘텐츠 유형을 허용한다.
+* CommonsMultipartResolver 세부사항 및 구성 옵션은 javadoc 참조
+* Servlet 3.0은 모든 Servlet 컨테이너에서 지원되지 않을 수 있다.
+* StandardServletMultipartResolver 세부사항 및 구성 옵션은 javadoc 참조
