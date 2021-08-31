@@ -195,3 +195,51 @@
 ### @RequestAttribute
 
 * @SessionAttribute와 유사하게 @RequestAttribute를 사용하여 이전에 생성된 기존 요청 속성에 접근할 수 있다.
+
+<br>
+
+### Multipart
+
+* MultipartResolver가 활성화된 상태에서 POST 요청에 multipart/form-data가 담겨있으면 Multipart를 사용해서 액세스할 수 있다.
+* @PostMapping, @RequestParam("file") MultipartFile file 이런 식으로 사용한다.
+* JSON이 포함된 파일은 @PostMapping, @RequestPart("meta-data") MetaData metadata, @RequestPart("file-data") MultipartFile file 이런 식으로 사용한다.
+* @RequestParam에 이름을 지정하지 않고 Map<String, MultipartFile> 또는 MultiValueMap<String, MultipartFile>를 활용할 수 있다.
+* Servlet 3.0을 사용하면 Spring의 MultipartFile 대신 javax.servlet.http.Part를 사용할 수도 있다.
+
+<br>
+
+### @RequestBody
+
+* request body를 읽거나 직렬화를 복원할 때 사용한다.
+
+<br>
+
+### HttpEntity
+
+* @RequestBody와 거의 동일하지만 요청 헤더와 본문을 노출하는 컨테이너 객체를 기반으로 한다.
+
+<br>
+
+### @ResponseBody
+
+* @ResponseBody를 사용하면 HttpMessageConverter를 통해 응답 본문에 반환을 직렬화할 수 있다. 
+
+<br>
+
+### ResponseEntity
+
+* @ResponseBody같지만 상태와 헤더가 있다.
+
+<br>
+
+### JSON Views
+
+* Spring MVC는 Jackson’s Serialization Views를 제공한다.
+* @JsonView를 활용한다.
+
+<br>
+
+### 예외
+
+* @Controller 또는 @ControllerAdvice 클래스는 @ExceptionHandler 메소드를 통해서 예외를 처리한다.
+* Spring 5.3에서는 임의의 원인 수준을 일치시킬 수 있지만 이전 버전에서는 포괄적인 원인만 고려되었다.
