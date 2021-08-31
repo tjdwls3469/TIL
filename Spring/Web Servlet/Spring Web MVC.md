@@ -50,3 +50,40 @@
 6. 모델이 반환되면 뷰가 렌더링 된다. 만약 모델이 반환되지 않으면 요청이 이미 수행되었을 수 있으므로 렌더링되지 않는다.
 
 * HTTP 캐싱 지원을 위해 WebRequest의 checkNotModified 메소드를 사용할 수 있다.
+
+<br>
+
+### Spring Web MVC 동작원리 다시 정리
+
+1. 클라이언트로 요청이 온다.
+2. LocaleResolver, ThemeResolver, MultipartResolver를 통해서 locale, theme, multipart를 체크한다.
+3. HandlerMapping을 통해 적절한 Controller를 찾아 요청을 위임한다.
+4. 실행에 대한 결과(model)를 받으면 ViewResolver를 통해 View를 받는다.
+5. 최종적으로 결과를 응답한다.
+
+<br>
+
+### Interception
+
+* 모든 HandlerMapping 구현은 유용한 핸들러 인터셉터를 지원한다.
+* org.springframework.web.servlet 패키지의 HandlerInterceptor에서 구현해야 한다.
+* preHandle(..)
+    * 실제 핸들러가 실행되기 전
+* postHandle(..)
+    * 핸들러 실행 후
+* afterCompletion(..)
+    * 완전한 요청이 완료된 후
+* Controller Advice를 활용하는 방법도 있다.
+
+<br>
+
+### 예외
+
+* 요청 매핑 중에 예외가 발생하거나 @Controller에서 예외가 발생하면 DispatcherServlet가 예외처리를 HandlerExceptionResolver에게 위임하여 예외를 해결한다.
+
+|HandlerExceptionResolver|설명|
+|------|-------|
+|SimpleMappingExceptionResolver|예외 클래스 이름과 오류 보기 등 응용 프로그램에서 오류 페이지를 렌더링 하는 데 유용하다.|
+|DefaultHandlerExceptionResolver|Spring MVC에서 발생한 예외를 해결하고 이를 HTTP 상태 코드에 매핑한다. ResponseEntityExceptionHandler 참조|
+|ResponseStatusExceptionResolver|ResponseStatus 어노테이션으로 예외를 해결하고 HTTP 상태 코드에 매핑한다.|
+|ExceptionHandlerExceptionResolver|@Controller 클래스 안에 있는 @ExceptionHandler 메소를 호출하거나 @ControllerAdvice 클래스를 통해서 예외를 해결한다.|
