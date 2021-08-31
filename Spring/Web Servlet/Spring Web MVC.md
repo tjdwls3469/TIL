@@ -4,6 +4,7 @@
 * 정식 명칭은 Spring Web MVC이다.
 * 일반적으로 Spring MVC로 알려져 있다.
 * Spring Framework 5.0은 "Spring WebFlux"라는 모듈을 기반으로 하는 반응형 웹 프레임워크를 도입했다.
+* <https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#spring-web>
 
 <br>
 
