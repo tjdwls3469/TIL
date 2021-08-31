@@ -79,11 +79,11 @@
 
 ### 예외
 
-* 요청 매핑 중에 예외가 발생하거나 @Controller에서 예외가 발생하면 DispatcherServlet가 예외처리를 HandlerExceptionResolver에게 위임하여 예외를 해결한다.
+* 요청 매핑 중에 예외가 발생하거나 @Controller에서 예외가 발생하면 DispatcherServlet가 예외 처리를 HandlerExceptionResolver에게 위임하여 예외를 해결한다.
 
 |HandlerExceptionResolver|설명|
 |------|-------|
 |SimpleMappingExceptionResolver|예외 클래스 이름과 오류 보기 등 응용 프로그램에서 오류 페이지를 렌더링 하는 데 유용하다.|
 |DefaultHandlerExceptionResolver|Spring MVC에서 발생한 예외를 해결하고 이를 HTTP 상태 코드에 매핑한다. ResponseEntityExceptionHandler 참조|
 |ResponseStatusExceptionResolver|ResponseStatus 어노테이션으로 예외를 해결하고 HTTP 상태 코드에 매핑한다.|
-|ExceptionHandlerExceptionResolver|@Controller 클래스 안에 있는 @ExceptionHandler 메소를 호출하거나 @ControllerAdvice 클래스를 통해서 예외를 해결한다.|
+|ExceptionHandlerExceptionResolver|@Controller 클래스 안에 있는 @ExceptionHandler 메소드를 호출하거나 @ControllerAdvice 클래스를 통해서 예외를 해결한다.|
