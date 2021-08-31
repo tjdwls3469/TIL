@@ -13,7 +13,7 @@
 
 * 대부분의 Spring 사용자는 선언적 트랜잭션 관리를 선택한다
 * 애클리케이션 코드에 가장 적은 영향을 미친다
-* @Transaction 을 통해서 사용한다
+* @Transactional 을 통해서 사용한다
 * AOP 프록시를 통해 활성화되고 메타데이터(XML 또는 어노테이션)에 의해 구동된다
 * 일반적으로 PlatformTransactionManager를 사용하고 reactive transaction인 경우에 ReactiveTransactionManager를 사용한다
 
