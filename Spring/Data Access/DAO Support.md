@@ -1,7 +1,7 @@
 ### DAO 지원
 
-* Spring에서 DAO(Data Access Object)지원은 일관된 방식으로 Data Access 기술(JDBC, Hibernate, JPA)로 쉡게 작업할 수 있도록 하는 것을 목표로 한다
-* DataAccessException를 통해서 catch-and-thorw 블록과 예외 선언 없이도 예외를 처리할 수 있다
+* Spring에서 DAO(Data Access Object)지원은 일관된 방식으로 Data Access 기술(JDBC, Hibernate, JPA)로 쉡게 작업할 수 있도록 하는 것을 목표로 한다.
+* DataAccessException를 통해서 catch-and-thorw 블록과 예외 선언 없이도 예외를 처리할 수 있다.
 
 <br>
 
@@ -12,4 +12,4 @@
 
 ### DAO 또는 Repository class를 구성하는 데 사용되는 annotation
 
-* 가장 좋은 방법은 @Repository을 사용하는 것이다
+* 가장 좋은 방법은 @Repository을 사용하는 것이다.
