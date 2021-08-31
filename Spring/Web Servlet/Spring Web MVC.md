@@ -114,3 +114,84 @@
 * CommonsMultipartResolver 세부사항 및 구성 옵션은 javadoc 참조
 * Servlet 3.0은 모든 Servlet 컨테이너에서 지원되지 않을 수 있다.
 * StandardServletMultipartResolver 세부사항 및 구성 옵션은 javadoc 참조
+
+<br>
+
+### Annotated Controllers
+
+* @Controller, @RestController
+* @RestController는 @Controller와 @ResponseBody가 합쳐진 것이다.
+
+<br>
+
+### Request Mapping
+
+* 클래스 수준에서는 공유 매핑을 해야하기 때문에 @RequestMapping이 필요하다.
+* HTTP 메소드별 @RequestMapping
+* @GetMapping
+* @PostMapping
+* @PutMapping
+* @DeleteMapping
+* @PatchMapping
+
+<br>
+
+### URI 패턴
+
+* @RequestMapping메소드는 URL 패턴을 사용하여 매핑할 수 있고 두 가지 방법이 있다.
+* PathPattern, AntPathMatcher 
+* 웹 어플리케이션에 권장되는 솔루션이다.
+* Spring WebFlux에서는 유일한 선택이다.
+* Spring 5.3 이전에는 AntPathMatcher가 Spring MVC의 유일한 선택이었고 기본값이었다.
+
+<br>
+
+### @RequestParam
+
+* 요청 매개변수를 컨트롤러의 메소드 인수에 바인딩 할 수 있다.
+* 기본적으로 @RequestParam을 사용하면 매개변수는 필수이지만 required를 false로 설정하거나 java.util.Optional 래퍼로 인수를 선언하여 메소드 매개변수를 선택사항으로 지정할 수 있다.
+* 매개변수 타입이 String이 아닌 경우 타입 변환이 자동으로 적용된다.
+* Map<String, String>, MultiValueMap<String, String>를 사용하면 지정된 각 매개변수 이름에 대한 값으로 맵이 채워진다.
+
+<br>
+
+### @RequestHeader
+
+* 요청의 헤더를 바인딩할 수 있다.
+* 매개변수 타입이 String이 아닌 경우 타입 변환이 자동으로 적용된다.
+* Map<String, String>, MultiValueMap<String, String>를 사용하면 지정된 각 매개변수 이름에 대한 값으로 맵이 채워진다.
+
+<br>
+
+### @CookieValue
+
+* HTTP 쿠키 값을 바인딩할 수 있다.
+* 매개변수 타입이 String이 아닌 경우 타입 변환이 자동으로 적용된다.
+
+<br>
+
+### @ModelAttribute
+
+* 메소드의 인수에 사용하여 모델의 속성에 액세스하거나 존재하지 않는 경우 인스턴스화(기본 생성자 호출)할 수 있다.
+* model 속성은 필드 이름과 일치하는 매개변수의 값으로 오버레이 된다.
+* 데이터 바인딩으로 오류가 발생하면 기본적으로 BindException이 발생한다.
+* @Valid으로 바인딩 후 유효성 검증을 자동으로 적용할 수 있다.
+
+<br>
+
+### @SessionAttributes
+
+* HTTP 서블릿 세션에 모델 속성을 저장하는 데 사용한다.
+
+<br>
+
+### @SessionAttribute
+
+* 전역적으로 관리되는 기존 세션 속성에 접근하는 경우 사용한다.
+* 세션이 존재하거나 존재하지 않을 수 있는 경우에도 사용한다.
+
+<br>
+
+### @RequestAttribute
+
+* @SessionAttribute와 유사하게 @RequestAttribute를 사용하여 이전에 생성된 기존 요청 속성에 접근할 수 있다.
