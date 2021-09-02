@@ -49,6 +49,7 @@
 
 * 테이블의 인덱스를 확인하려면 SHOW INDEXES를 사용하자.
 * SHOW INDEXES FROM 테이블명;
+* <https://www.mysqltutorial.org/mysql-index/mysql-show-indexes/>
 
 <br>
 
