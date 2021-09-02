@@ -70,3 +70,11 @@
 * MySQL은 clustered index의 행 검색에 primary key 값을 사용한다.
 * 따라서 primary key가 짧은 것이 유리하다.
 * 일반적으로 primary key는 auto-increment integer를 사용한다.
+* <https://www.mysqltutorial.org/mysql-index/mysql-clustered-index/>
+
+<br>
+
+### 인덱스와 Cardinality
+
+* Cardinality 낮은 경우 인덱스를 사용하지 않고 행 전체를 스캔하는 것이 효과적일 수 있다.
+* <https://www.mysqltutorial.org/mysql-index/mysql-index-cardinality/>
