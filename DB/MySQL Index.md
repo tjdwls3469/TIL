@@ -39,6 +39,7 @@
 * EXPLAIN SELECT employeeNumber, lastName, firstName FROM employees WHERE jobTitle = 'Sales Rep';
 * 인덱스 없이 전체를 스캔 한 경우
 <img src = "https://user-images.githubusercontent.com/53414240/131798910-aaf2bf0a-c2aa-4ceb-9281-dcc14723eafa.png" width="70%" height="70%">
+
 * 인덱스를 참조한 경우
 <img src = "https://user-images.githubusercontent.com/53414240/131799010-d4511478-1ebf-4be4-ac0e-644c0bf3130d.png" width="70%" height="70%">
 
