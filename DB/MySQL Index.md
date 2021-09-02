@@ -78,3 +78,15 @@
 
 * Cardinality 낮은 경우 인덱스를 사용하지 않고 행 전체를 스캔하는 것이 효과적일 수 있다.
 * <https://www.mysqltutorial.org/mysql-index/mysql-index-cardinality/>
+
+<br>
+
+### USE INDEX hint
+
+* query optimizer 최상의 계획을 위해 많은 매개 변수를 사용한다.
+* 사용할 인덱스를 선택하는 가장 중요한 매개변수 중 하나는 cardinality이다.
+* 그러나 많은 삽입 또는 삭제하여 테이블 많이 수정된 경우 cardinality가 정확하지 않다.
+* 이 문제를 해결하려면 ANALYZE TABLE 문을 주기적으로 실행하여 cardinality를 업데이트해야 한다.
+* 또는 USE INDEX라는 인덱스 힌트를 사용하여 query optimizer가 수행하는 인덱스를 추천할 수 있는 대체 방법이 있다.
+* SELECT 컬럼명 FROM 테이블명 USE INDEX(인덱스리스트) WHERE 조건;
+* 위의 구문에서 USE INDEX(인덱스리스트)는 query optimizer에게 명명된 인덱스리스트 중 하나를 사용하여 테이블에서 행을 찾도록 지시한다.
