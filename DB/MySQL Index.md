@@ -90,3 +90,4 @@
 * 또는 USE INDEX라는 인덱스 힌트를 사용하여 query optimizer가 수행하는 인덱스를 추천할 수 있는 대체 방법이 있다.
 * SELECT 컬럼명 FROM 테이블명 USE INDEX(인덱스리스트) WHERE 조건;
 * 위의 구문에서 USE INDEX(인덱스리스트)는 query optimizer에게 명명된 인덱스리스트 중 하나를 사용하여 테이블에서 행을 찾도록 지시한다.
+* <https://www.mysqltutorial.org/mysql-index/mysql-use-index/>
