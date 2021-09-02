@@ -62,3 +62,11 @@
 * SHOW KEYS FROM 테이블명 IN DB명;
 * 위의 쿼리는 서로 같다.
 * 참고로 INDEXES 쿼리에서 INDEX와 KEYS는 동의어고 IN과 FROM도 동의어다.
+
+<br>
+
+### clustered index on InnoDB tables
+
+* MySQL은 clustered index의 행 검색에 primary key 값을 사용한다.
+* 따라서 primary key가 짧은 것이 유리하다.
+* 일반적으로 primary key는 auto-increment integer를 사용한다.
