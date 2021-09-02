@@ -49,3 +49,15 @@
 
 * 테이블의 인덱스를 확인하려면 SHOW INDEXES를 사용하자.
 * SHOW INDEXES FROM 테이블명;
+
+<br>
+
+### 다른 DB 인덱스 조회
+
+* SHOW INDEXES FROM 테이블명 IN DB명;
+* SHOW INDEXES FROM DB명.테이블명;
+* 위의 쿼리는 서로 유사하다.
+* SHOW INDEXES IN 테이블명 FROM DB명;
+* SHOW KEYS FROM 테이블명 IN DB명;
+* 위의 쿼리는 서로 같다.
+* 참고로 INDEXES 쿼리에서 INDEX와 KEYS는 동의어고 IN과 FROM도 동의어다.
